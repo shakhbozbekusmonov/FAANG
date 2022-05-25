@@ -151,3 +151,93 @@ function parrotTrouble(talking, hour){
 }
 console.log(parrotTrouble(false, 6));
 
+// Warmup 1.6
+// Example 1
+// function makes10(a, b) {
+//     if ((a === 10) || (b === 10) || (a + b) === 10){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+function makes10(a, b){
+    return ((a + b) === 10 || a === 10 || b === 10);
+}
+
+console.log(makes10(9, 1));
+
+// Warmup 1.7
+// Example 1
+// function nearHundred(n) {
+//     if (Math.abs(n - 100) <= 10 || Math.abs(n - 200) <= 10){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+function nearHundred(n){
+    return Math.abs(n - 100) <= 10 || Math.abs(n - 200) <= 10;
+}
+
+console.log(nearHundred(93));
+
+// Warmup 1.8
+// Example 1
+// function posNeg(a, b, negative) {
+//     if (((a < 0 || b < 0) && !negative) || ((a < 0 && b < 0) && negative)){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function posNeg(a,b,negative) {
+//     return !!(((a < 0  b < 0) && !negative)  (a < 0 && b < 0 && negative));
+// }
+
+// Example 3
+function posNeg(a, b, negative){
+    return negative && a < 0 && b < 0 || !negative && a > 0 && b < 0 || !negative && a < 0 && b > 0;
+}
+
+console.log(posNeg(-1, -1,true));
+
+// Warmup 1.9
+// Example 1
+// function notString(str) {
+//     if (str.slice(0, 3) === "not"){
+//         return str;
+//     } else {
+//         return "not " + str;
+//     }
+// }
+
+// Example 2
+// function notString(str){
+//     return str.slice(0, 3) === "not" ? str : "not " + str;
+// }
+
+// Example 3
+function notString(str){
+    return str.startsWith("not") ? str : "not " + str;
+}
+
+console.log(notString("candy"));
+
+// Warmup 1.10
+// Example 1
+// function missingChar(str, n) {
+//     return str.slice(0, n) + str.slice(n + 1)
+// }
+
+// Example 2
+function missingChar(str, n){
+    return str.replace(str.charAt(n), "");
+}
+
+console.log(missingChar("kitten", 4));
