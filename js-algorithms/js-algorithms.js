@@ -241,3 +241,121 @@ function missingChar(str, n){
 }
 
 console.log(missingChar("kitten", 4));
+
+// Warmup 1.11
+// Example 1
+// function frontBack(str) {
+//     return str.slice(-1) + str.slice(1, -1) + str.slice(0, 1);
+// }
+
+// Example 2
+function frontBack(str){
+    if (str.length >= 2){
+        return str.charAt(str.length - 1) + str.slice(1, -1) + str.charAt(0);
+    } else {
+        return str;
+    }
+}
+
+console.log(frontBack("ab"));
+
+// Warmup 1.12
+// Example 1
+// function front3(str) {
+//     if (str.length < 3){
+//         return str + str + str;
+//     } else {
+//         return str.slice(0, 3) + str.slice(0, 3) + str.slice(0, 3);
+//     }
+// }
+
+// Example 2
+// function front3(str){
+//     return str.slice(0, 3) + str.slice(0, 3) + str.slice(0, 3);
+// }
+
+// Example 3
+// function front3(str){
+//     return str.substring(0, 3) + str.substring(0, 3) + str.substring(0, 3);
+// }
+
+// Example 4
+// function front3(str){
+//     return str.substr(0, 3) + str.substr(0, 3) + str.substr(0, 3);
+// }
+
+// Example 5
+function front3(str){
+    return str.length <= 3 ? str + str + str : str.substr(0, 3) +str.substr(0, 3) +str.substr(0, 3);
+}
+
+console.log(front3("JavaScript"));
+
+// Warmup 1.13
+// Example 1
+// function backAround(str) {
+//     return str.slice(-1) + str + str.slice(-1);
+// }
+
+// Example 2
+// function backAround(str){
+//     return str.charAt(str.length - 1) + str + str.charAt(str.length - 1);
+// }
+
+// Example 3
+function backAround(str){
+    return str.substr(-1, 1) + str + str.substr(-1, 1);
+}
+
+console.log(backAround("cat"));
+
+// Warmup 1.14
+// Example 1
+// function or35(num) {
+//     if (num % 3 === 0 || num % 5 === 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+function or35(num){
+    return (num % 3 === 0) || (num % 5 === 0);
+}
+
+console.log(or35(3));
+
+// Warmup 1.15
+// Example 1
+// function front22(str) {
+//     return str.slice(0, 2) + str + str.slice(0, 2);
+// }
+
+// Example 2
+function front22(str){
+    return str.substr(0, 2) + str + str.substr(0, 2);
+}
+
+console.log(front22("kitten"));
+
+// Warmup 1.16
+// Example 1
+// function startHi(str) {
+//     return str.startsWith("hi");
+// }
+
+// Example 2
+// function startHi(str){
+//     return str.slice(0, 2) === "hi";
+// }
+
+// Example 3
+function startHi(str){
+    if (!str.startsWith("hi")) {
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(startHi("hi"));
