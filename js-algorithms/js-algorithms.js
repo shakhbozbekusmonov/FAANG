@@ -359,3 +359,159 @@ function startHi(str){
     }
 }
 console.log(startHi("hi"));
+
+// Warmup 1.17
+// Example 1
+// function icyHot(a, b) {
+//     if (a < 0 || a > 100 && b < 0 || b > 100){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function icyHot(a, b){
+//     return a < 0 || a > 100 && b < 0 || b > 100;
+// }
+
+// Example 3
+function icyHot(a, b){
+    return a > 100 && b < 0 || a < 0 && b > 100;
+}
+
+console.log(icyHot(-1, 120));
+
+// Warmup 1.18
+// Example 1
+// function in1020(a, b) {
+//     if (a >= 10 || a <= 20 && b >= 10 || b <= 20){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function in1020(a, b) {
+//     return a >= 10 || a <= 20 && b >= 10 || b <= 20;
+// }
+
+// Example 3
+function in1020(a, b){
+    return a >= 10 || b <= 20;
+}
+
+console.log(in1020(12, 99));
+
+// Warmup 1.19
+// Example 1
+// function hasTen(a, b, c) {
+//     if (a >= 13 || a <= 19 && b >= 13 || b <= 19 && c >= 13 || c <= 19){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function hasTen(a, b, c){
+//     return a >= 13 || a <= 19 && b >= 13 || b <= 19 && c >= 13 || c <= 19
+// }
+
+// Example 3
+function hasTen(a, b, c){
+    return  (a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19);
+}
+console.log(hasTen(13, 20, 10));
+
+// Warmup 1.20
+// Example 1
+// function loneTeen(a, b) {
+//     if (a >= 13 && b > 19 || a > 19 && b >= 13){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+function loneTeen(a, b){
+    return (a >= 13 && b > 19) || (a > 19 && b >= 13);
+}
+
+
+console.log(loneTeen(13, 99));
+
+// Warmup 1.21
+// Example 1
+// function delDel(str) {
+//     if (str.startsWith("del", 1)){
+//         return str.slice(0, 1) + str.slice(4);
+//     } else {
+//         return str;
+//     }
+// }
+
+// Example 2
+// function delDel(str){
+//     return str.startsWith("del", 1) ? str.slice(0, 1) + str.slice(4) : str;
+// }
+
+// Example 3
+function delDel(str){
+    return str.startsWith("del", 1) ? str.charAt(0) + str.substring(4, str.length) : str;
+}
+
+console.log(delDel("adedbc"));
+
+// Warmup 1.22
+// Example 1
+// function mixStart(str) {
+//     if (str.startsWith("mix") || str.startsWith("pix") || str.startsWith("9ix")){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function mixStart(str) {
+//     return str.startsWith("mix") || str.startsWith("pix") || str.startsWith("9ix");
+// }
+
+// Example 3
+function mixStart(str){
+    return str.startsWith("ix", 1);
+}
+
+console.log(mixStart("piz snacks"));
+
+// Warmup 1.23
+// Example 1
+// function startOz(str) {
+//     if (str.startsWith("oz")){
+//         return "oz";
+//     } else if (str.startsWith("o")){
+//         return "o";
+//     } else if (str.startsWith("z", 1)){
+//         return "z";
+//     } else {
+//         return "";
+//     }
+// }
+
+// Example 2
+// function startOz(str){
+//     return str.startsWith("oz") ? str.slice(0, 1) : str.charAt(0) === "o" && str.charAt(1)!== "z" ? "o" : "z";
+// }
+
+// Example 3
+function startOz(str) {
+    let result = "";
+    if (str.length > 0 && str.charAt(0) === 'o') result += 'o';
+    if (str.length > 1 && str.charAt(1) === 'z') result += 'z';
+    return result;
+}
+
+console.log(startOz("vzymandias"));
