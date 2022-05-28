@@ -1,4 +1,4 @@
-// ------------------- CodingBat Warmup 1
+// --------------- Warmup 1 I am Started ----------------------- //
 // Warmup 1.1
 // Example 1
 // function sleepIn(weekDay, vacation) {
@@ -515,3 +515,208 @@ function startOz(str) {
 }
 
 console.log(startOz("vzymandias"));
+
+// Warmup 1.24
+// Example 1
+// function intMax(a, b, c) {
+//     if (b < a && a > c){
+//         return a;
+//     } else if (a < b && b > c) {
+//         return b;
+//     } else {
+//         return c;
+//     }
+// }
+
+// Example 2
+// function intMax(a, b, c){
+//     return b < a && a > c ? a : a < b && b > c ? b : a < c && c > b ? c : "";
+// }
+
+// Example 3
+// function intMax(a, b, c){
+//     return Math.max(a, b, c);
+// }
+
+// Example 4
+// function intMax(a, b, c){
+//     let max = a;
+//     if (b > max) max = b;
+//     if (c > max) max = c;
+//     return max;
+// }
+
+// Example 5
+function intMax(a,b,c) {
+    let max = a;
+    return (b>max ? b : a) || (c>max ? c : a);
+}
+
+console.log(intMax(1, 3, 4));
+
+// Warmup 1.25
+// Example 1
+// function close10(a, b) {
+//     if (Math.abs(10 - a) < Math.abs(10 - b)){
+//         return a;
+//     } else if (Math.abs(10 - a) > Math.abs(10 - b)){
+//         return b;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// Example 2
+// function close10(a, b){
+//     return Math.abs(10 - a) < Math.abs(10 - b) ? a : Math.abs(10 - a) > Math.abs(10 - b) ? b : 0;
+// }
+
+// Example 3
+function close10(a, b){
+    let c = Math.abs(b - 10);
+    let d = Math.abs(a - 10);
+    return (c === d) ? 0 : ((a < b) ? a : b);
+}
+
+console.log(close10(8, 13));
+
+// Warmup 1.26
+// Example 1
+// function in3050(a, b) {
+//     if ((a >= 30 && a <= 40) && (b >= 30 && b <= 40) || (a >= 40 && a <= 50) && (b >= 40 && b <= 50)){
+//         return true;
+//     } else {
+//        return false;
+//     }
+// }
+
+// Example 2
+function in3050(a, b){
+    return (a >= 30 && a <= 40) && (b >= 30 && b <= 40) || (a >= 40 && a <= 50) && (b >= 40 && b <= 50);
+}
+
+console.log(in3050(30, 31));
+
+// Warmup 1.27
+// Example 1
+// function max1020(a, b) {
+//     return (a >= 10 && b <= 20) ? Math.max(a, b) : 0;
+// }
+
+// Example 2
+// function max1020(a, b){
+//     if (b > a) {
+//         let temp = a;
+//         a = b;
+//         b = temp;
+//     }
+//     if (a >= 10 && a <= 20) return a;
+//     if (b >= 10 && b <= 20) return b;
+//     return 0;
+// }
+
+// Example 3
+function max1020(a, b){
+    if ((a >= 10 && a <= 20) && (b >= 10 && b <= 20)){
+        return Math.max(a, b);
+    } else {
+        return 0;
+    }
+}
+
+console.log(max1020(11, 19));
+
+// Warmup 1.28
+// Example 1
+// function stringE(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++){
+//         if (str[i] === "e"){
+//             count++;
+//         }
+//     }
+//     return 1 <= count && count <= 3;
+// }
+
+// Example 2
+function stringE(str){
+    let count = 0;
+    for (let i = 0; i < str.length; i++){
+        if (str.charAt(i) === "e"){
+            count++;
+        }
+    }
+    return 1 <= count && count <= 3;
+}
+
+console.log(stringE("Heelele"));
+
+// Warmup 1.29
+// Example 1
+// function lastDigit(a, b) {
+//     if (a % 2 === 1 && b % 2 === 1){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function lastDigit(a, b){
+//     return a % 2 === 1 && b % 2 === 1;
+// }
+
+// Example 3
+function lastDigit(a, b){
+    return (a % 10 === b % 10);
+}
+
+console.log(lastDigit(3, 113));
+
+// Warmup 1.30
+// Example 1
+// function endUp(str) {
+//     if (str.length > 3){
+//         let str2 = str.slice(-3);
+//         return str.slice(0, -3) + str2.toUpperCase();
+//     } else {
+//         return str.toUpperCase();
+//     }
+// }
+
+// Example 2
+// function endUp(str) {
+//     if (str.length > 3){
+//         return str.slice(0, -3) + str.slice(-3).toUpperCase();
+//     } else {
+//         return str.toUpperCase();
+//     }
+// }
+
+// Example 3
+function endUp(str){
+    return str.length < 3 ? str.toUpperCase() : str.slice(0, -3) + str.slice(-3).toUpperCase();
+}
+
+console.log(endUp("Hello"));
+
+// Warmup 1.31
+// Example 1
+// function everyNth(str, n) {
+//     let str2 = "";
+//     for (let i = 0; i < str.length; i += n){
+//         str2 += str.charAt(i);
+//     }
+//     return str2;
+// }
+
+// Example 2
+function everyNth(str, n){
+    let str2 = "";
+    for (let i = 0; i < str.length; i += n) str2 += str.charAt(i);
+    return str2;
+}
+
+console.log(everyNth("Miracle", 2));
+
+// --------------- Warmup 1 I am Finished ----------------------- //
