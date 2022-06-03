@@ -1,3 +1,4 @@
+// ----- Created by Miracle Programmer (Shakhbozbek Usmonov) ----- //
 // --------------- Warmup 1 I am Started ----------------------- //
 // Warmup 1.1
 // Example 1
@@ -1542,3 +1543,517 @@ function seeColor(str){
 }
 
 console.log(seeColor("redxx"));
+
+// String 1.26
+// Example 1
+// function frontAgain(str){
+//     if (str.startsWith("ed") === str.endsWith("ed")){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function frontAgain(str) {
+//     return str.slice(0, 2) === str.slice(-2);
+// }
+
+// Example 3
+function frontAgain(str){
+    return str.startsWith("ed") === str.endsWith("ed");
+}
+
+console.log(frontAgain("ed"));
+
+// String 1.27
+// Example 1
+// function minCat(a, b) {
+//     if (a.length > b.length){
+//         return a.slice(-b.length) + b;
+//     } else {
+//         return a + b.slice(-a.length);
+//     }
+// }
+
+// Example 2
+function minCat(a, b) {
+    return a.length > b.length ? a.slice(-b.length) + b : a + b.slice(-a.length);
+} 
+
+console.log(minCat("java", "Hello"));
+
+// String 1.28
+// Example 1
+// function extraFront(str) {
+//     return str.slice(0, 2) + str.slice(0, 2) + str.slice(0, 2);
+// }
+
+// Example 2
+// function extraFront(str) {
+//     return str.substr(0, 2) + str.substr(0, 2) + str.substr(0, 2);
+// }
+
+// Example 3
+function extraFront(str) {
+    return str.slice(0, 2).repeat(3);
+}
+console.log(extraFront("Hello"));
+
+// String 1.29
+// Example 1
+// function without2(str) {
+//     if (str.slice(0, 2) === str.slice(-2)){
+//         return str.slice(2);
+//     } else {
+//         return str;
+//     }
+// }
+
+// Example 2
+function without2(str) {
+    return str.slice(0, 2) === str.slice(-2) ? str.slice(2) : str;
+}
+
+console.log(without2("Hi"));
+
+// String 1.30
+// Example 1
+// function deFront(str) {
+//     if (str.startsWith("a")){
+//         return str.slice(0, 1) + str.slice(2, 3) + str.slice(3);
+//     } else if (str.startsWith("b", 1)){
+//         return str.slice(1);
+//     } else {
+//         return str.slice(2);
+//     }
+// }
+
+// Example 2
+// function deFront(str) {
+//     let str2 = "";
+//     for (let i = 0; i < str.length; i++){
+//         if (i === 0 && str.charAt(i) === "a"){
+//             str2 += "a";
+//         } else if (i === 1 && str.charAt(i) === "b"){
+//             str2 += "b";
+//         } else if (i > 1){
+//             str2 += str.charAt(i);
+//         }
+//     } return str2;
+// }
+
+// Example 3
+function deFront(str) {
+    return str.startsWith("a") ? str.slice(0, 1) + str.slice(2, 3) + str.slice(3) : str.startsWith("b", 1) ? str.slice(1) : str.slice(2);
+}
+
+console.log(deFront("away"));
+
+// String 1.31
+// Example 1
+// function startWord(a, b) {
+//     if (a.length > b.length){
+//         return a.slice(0, b.length);
+//     } else {
+//         return b.slice(0, a.length);
+//     }
+// }
+
+// Example 2
+function startWord(a, b) {
+    return a.length > b.length ? a.slice(0, b.length) : b.slice(0, a.length);
+}
+console.log(startWord("hippo", "hi"));
+
+// String 1.32
+// Example 1
+// function withoutX(str) {
+//     if (str.startsWith("x") && str.endsWith("x")){
+//         return str.slice(1, -1);
+//     } else if (str.startsWith("x")){
+//         return str.slice(1);
+//     } else {
+//         return str.slice(0, -1);
+//     }
+// }
+
+// Example 2
+function withoutX(str) {
+    return str.startsWith("x") && str.endsWith("x") ? str.slice(1, -1) : str.startsWith("x") ? str.slice(1) : str.slice(0, -1);
+}
+
+console.log(withoutX("xHix"));
+
+// String 1.33
+// Example 1
+// function withoutX2(str) {
+//     if (str.startsWith("x")){
+//         return str.slice(1);
+//     } else if (str.startsWith("x", 1)){
+//         return str.slice(0,1) + str.slice(2);
+//     } else {
+//         return str;
+//     }
+// }
+
+// Example 2
+// function withoutX2(str) {
+//     let temp = "";
+//     for (let i = 0; i < str.length; i++) {
+//         if (i === 0 && str.charAt(i) !== 'x')
+//         temp += str.charAt(i);
+//     else if (i === 1 && str.charAt(i) !== 'x')
+//         temp += str.charAt(i);
+//     else if (i > 1)
+//         temp += str.charAt(i);
+//     }return temp;
+// }
+
+
+// Example 
+function withoutX2(str) {
+    return str.startsWith("x") ? str.slice(1) : str.startsWith("x", 1) ? str.slice(0, 1) + str.slice(2) : str;
+}
+
+console.log(withoutX2("xHi"));
+
+// --------------- String 1 I am Finished ----------------------- //
+
+// --------------- String 2 I am Started ------------------------ //
+
+// String 2.1
+// Example 1
+// function doubleChar(str) {
+//     let result = ""
+//     for (let i = 0; i < str.length; i++){
+//         result += str[i] + str[i];
+//     } return result;
+// }
+
+// Example 2
+// function doubleChar(str) {
+//     let result = "";
+//     for (let i = 0; i < str.length - 1; i++){
+//         result += str.charAt(i);
+//         result += str.charAt(i);
+//     } return result;
+// }
+
+// Example 3
+function doubleChar(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++){
+        result += str[i].repeat(2);
+    } return result;
+}
+
+console.log(doubleChar("The"));
+
+// String 2.2
+// Example 1
+// function countHi(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length - 1; i++){
+//         if (str.charAt(i) === "h" && str.charAt(i + 1) === "i"){
+//             count++;
+//         }
+//     } return count;
+// }
+
+// Exmaple 2
+// function countHi(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++){
+//         if (str.charAt(i) + str.charAt(i + 1) === "hi"){
+//             count++;
+//         }
+//     } return count;
+// }
+
+// Example 3
+// function countHi(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++){
+//         if (str.charAt(i).match("h") && str.charAt(i + 1).match("i")){
+//             count++;
+//         }
+//     } return count;
+// }
+
+// Example 4
+function countHi(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++){
+        if (str.substring(i, i + 2).match("hi")){
+            count++;
+        }
+    } return count;
+}
+
+console.log(countHi("hihi"));
+
+// String 2.3
+// Example 1
+// function catDog(str) {
+//     let a = 0;
+//     let b = 0;
+//     for (let i = 0; i < str.length; i++){
+//         if (str.substring(i, i + 3) === "cat"){
+//             a++;
+//         }
+//         if (str.substring(i, i + 3) === "dog") {
+//             b++;
+//         }
+//     } return a === b;
+// }
+
+// Example 2
+function catDog(str) {
+    let c = 0;
+    for (let i = 0; i < str.length - 2; i++){
+        if (str.substring(i, i + 3).match("cat")) c++;
+        if (str.substring(i, i + 3).match("dog")) c--;
+    } return c === 0;
+}
+
+console.log(catDog("1cat1cadodog"));
+
+// String 2.4
+// Example 1
+// function countCode(str) {
+//     let count = 0;
+//     for (let i = 0; i < str.length - 3; i++){
+//         if (str.substring(i, i + 2) === "co" && str.charAt(i + 3) === "e") count++;
+//     } return count;
+// }
+
+// Example 2
+// function countCode(str) {
+//     let count = 0;
+//     let co = "co";
+//     let e = "e";
+//     for (let i = 0; i < str.length - 3; i++) if (co.localeCompare(str.substring(i, i + 2)) === 0 && e.localeCompare(str.substring(i + 3, i + 4)) === 0){
+//         count++;
+//     } return count;
+// }
+
+// Example 3
+function countCode(str) {
+    let count = 0;
+    for (let i  = 0;  i < str.length - 3; i++) if (str.substring(i, i + 4).match("co[a-z]e")) count++
+    return count;
+}
+console.log(countCode("cozexxcope"))
+
+// String 2.5
+// Example 1
+// function endOther(a, b) {
+//     return a.slice(0, b.length).toLowerCase() === b.slice(-a.length).toLowerCase() || a.slice(-b.length).toLowerCase() === b.slice(0, a.length).toLowerCase();
+// }
+
+// Example 2
+function endOther(a, b) {
+    let aLow = a.toLowerCase();
+    let bLow = b.toLowerCase();
+    return aLow.endsWith(bLow) || bLow.endsWith(aLow);
+}
+
+console.log(endOther("abc", "abXabc"));
+
+// String 2.6
+// Example 1
+// function xyzThere(str) {
+//     if (str.startsWith("xyz") || str.endsWith("xyz") && str.slice(-4) !== ".xyz"){
+//         return true
+//     } else {
+//         return false;
+//     }
+// }
+
+// Example 2
+// function xyzThere(str) {
+//         for(let i = 0; i < str.length - 2; i++) {
+//             if(str.charAt(i) === '.') i++;
+//             else if(str.substring(i, i+3) === "xyz") return true;
+//         }
+//         return false;
+// }
+
+function xyzThere(str) {
+    for (let i = 0; i < str.length - 2; i++) if (str.charAt(i) === '.') i++; else if (str.slice(i, i + 3) === "xyz"){
+        return true;
+    } return false;
+}
+
+console.log(xyzThere("abcxyz"));
+
+// String 2.7
+// Example 1
+// function bobThere(str) {
+//     for (let i = 0; i < str.length - 2; i++){
+//         return !!str.substring(i, i + 3).match("b[a-zA-Z0-9]b");
+//     }
+// }
+
+// Example 2
+function bobThere(str) {
+    for (let i = 0; i < str.length - 2; i++) if (str.charAt(i) === "b" && str.charAt(i + 2) === "b"){
+        return true;
+    } return false;
+}
+
+console.log(bobThere("abcbob"))
+
+// String 2.8
+// Example 1
+// function xyBalance(str) {
+//    let x = false;
+//    let y = false;
+//    for (let i = 0; i < str.length; i++){
+//        if (str.charAt(i) === "x" && y === true){
+//            x = true;
+//            y = false;
+//        } else if (str.charAt(i) === "x"){
+//            x = true;
+//        }
+//        if (str.charAt(i) === "y" && x === true){
+//            y = true;
+//        }
+//        if (x === false){
+//            y = true;
+//        } return y;
+//    }
+// }
+
+// Example 2
+// function xyBalance(str) {
+//     return str.indexOf("x") === -1 || str.lastIndexOf("x") < str.lastIndexOf("y");
+// }
+
+// Example 3
+function xyBalance(str){
+    let count = 0;
+    for (let i  = 0; i < str.length; i++){
+        if (count === 0 && str.charAt(i) === "x") count++;
+        if (count !== 0 && str.charAt(i) === "y") count--;
+    }
+    return count === 0;
+}
+
+console.log(xyBalance("yaaxbb"));
+
+// String 2.9
+// Example 1
+// function mixString(a, b) {
+//     let result = "";
+//     for (let i = 0; i < (a.length + b.length); i++){
+//         result += a.charAt(i) + b.charAt(i);
+//     } return result;
+// }
+
+// Example 2
+// function mixString(a, b) {
+//     let result = "";
+//     let max = Math.max(a.length, b.length);
+//     for (let i = 0; i < max; i++){
+//         result += a.substring(i, i + 1);
+//         result += b.substring(i, i + 1);
+//     } return result;
+// }
+
+// Example 3
+function mixString(a, b) {
+    let result = "";
+    for (let i = 0; i < (a.length + b.length); i++) result += a.charAt(i) + b.charAt(i);
+    return result;
+}
+
+console.log(mixString("abc", "xyz"));
+
+// String 2.10
+// Example 1
+// function repeatEnd(str, n) {
+//     let result  = '';
+//     for (let i = 0; i <= n; i++){
+//         result += str.slice(-n)
+//     } return result;
+// }
+
+// Example 2
+function repeatEnd(str, n) {
+    return str.slice(-n).repeat(n);
+}
+
+console.log(repeatEnd("Hello", 2));
+
+// String 2.11
+// Example 1
+// function repeatFront(str, n) {
+//     let result = "";
+//     for (let i = 0; i <= n; i++){
+//         result += str.slice(0, n - i);
+//     } return result;
+// }
+
+// Example 2
+// function repeatFront(str, n) {
+//     let result = "";
+//     for (; n > 0; n--){
+//         result += str.substring(0, n);
+//     } return result;
+// }
+
+// Example 3
+function repeatFront(str, n) {
+    let result = "";
+    while (n > 0){
+        result += str.slice(0, n);
+        n--;
+    } return result;
+}
+
+console.log(repeatFront("Chocolate", 4));
+
+// String 2.12
+// Example 1
+// function repeatSeparator(a, b, n) {
+//     let word = a + b;
+//     if (a.length > b.length){
+//         return word.repeat(n).slice(0, -b.length);
+//     }
+// }
+
+// Example 2
+function repeatSeparator(a, b, n) {
+    let result = "";
+    for (let i = 0; i < n; i++){
+        if (i < n - 1){
+            result += a + b;
+        } else {
+            return a;
+        }
+    } return result;
+}
+
+console.log(repeatSeparator("This", "And", 1));
+
+// String 2.13
+// Example 1
+// function prefixAgain(str, n) {
+//     let prefix = str.substring(0, n);
+//     for (let i = n; i < str.length; i++){
+//         if (n + i <= str.length){
+//             if (prefix === str.substring(i, n + i)){
+//                 return true
+//             }
+//         }
+//     } return false;
+// }
+
+// Example 2
+function prefixAgain(str, n) {
+
+}
+
+console.log(prefixAgain("abXYabc", 1));
