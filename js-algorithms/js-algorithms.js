@@ -30,11 +30,7 @@
 
 // Example 4
 function sleepIn(weekDay, vacation){
-    if (weekDay && !vacation){
-        return false;
-    } else {
-        return true;
-    }
+    return !(weekDay && !vacation);
 }
 
 console.log(sleepIn(false, false));
@@ -353,11 +349,7 @@ console.log(front22("kitten"));
 
 // Example 3
 function startHi(str){
-    if (!str.startsWith("hi")) {
-        return false;
-    } else {
-        return true;
-    }
+    return str.startsWith("hi");
 }
 console.log(startHi("hi"));
 
@@ -2053,7 +2045,62 @@ console.log(repeatSeparator("This", "And", 1));
 
 // Example 2
 function prefixAgain(str, n) {
-
+    return str.lastIndexOf(str.substring(0, n)) !== 0;
 }
 
-console.log(prefixAgain("abXYabc", 1));
+console.log(prefixAgain("abXYabc", 3));
+
+// String 2.14
+// Example 1
+function xyzMiddle(str) {
+    let middle = str.length / 2;
+    if (str.length % 2 !== 0){
+        return str.slice(middle - 1, middle + 2) === "xyz";
+    } else {
+        return str.substring(middle - 1, middle + 2) === "xyz" || str.substring(middle - 2, middle + 1) === "xyz";
+    }
+}
+
+console.log(xyzMiddle("AxyzBB"));
+
+// String 2.15
+// Example 1
+function getSandwich(str) {
+    let first = str.indexOf("bread");
+    let last = str.lastIndexOf("bread");
+    if (first === last) return "";
+    return str.substring(first + 5, last);
+}
+
+console.log(getSandwich("breadjambread"));
+
+// String 2.16
+// Example 1
+function sameStarChar(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++){
+        if (str.charAt(i) === str.charAt(i + 1)){
+            result += str.charAt(i);
+        }
+    } return result.length === str.length - 1;
+}
+
+console.log(sameStarChar("xy*yzz"));
+
+// String 2.17
+// Example 1
+function oneTwo(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++){
+        if (i % 2 === 0){
+            result += str.charAt(i);
+        }
+    } return result;
+}
+
+console.log(oneTwo("abc"));
+
+// String 2.18
+// Example 1
+
+
